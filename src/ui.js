@@ -18,11 +18,11 @@ class UI {
         <div class="card-body">
           <h4 class="card-title">${post.title}</h4>
           <p class="card-text">${post.body}</p> 
-          <a href="#" class="edit card-link" data-id=${post.id}">
+          <a href="#" class="edit card-link" data-id=${post.id}>
             <i class="fa fa-pencil"></i>
           </a>
 
-          <a href="#" class="delete card-link" data-id=${post.id}">
+          <a href="#" class="delete card-link" data-id=${post.id}>
             <i class="fa fa-remove"></i>
           </a>
         </div>
@@ -33,6 +33,7 @@ class UI {
     this.post.innerHTML = output;
   }
 
+  // Show Alert Message
   showAlert(message, className){
      this.clearAlert();
 
@@ -55,6 +56,7 @@ class UI {
      }, 3000);
   }
 
+  // Clear Alert Message
   clearAlert(){
     const currentAlert = document.querySelector('.alert');
 
@@ -63,9 +65,17 @@ class UI {
     }
   }
 
+  // Clear All Fields
   clearFields(){
     this.titleInput.value = "";
     this.bodyInput.value = "";
+  }
+
+  // Fill form to edit
+  fillForm(data){
+    this.titleInput.value = data.title;
+    this.bodyInput.value = data.body;
+    this.idInput.value = data.id;
   }
 }
 
