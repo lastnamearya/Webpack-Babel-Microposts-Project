@@ -76,7 +76,29 @@ class UI {
     this.titleInput.value = data.title;
     this.bodyInput.value = data.body;
     this.idInput.value = data.id;
+
+    this.changeFormState('edit');
   }
+
+  // Change the form State
+  changeFormState(type){
+    if(type === 'edit'){
+      this.postSubmit.textContent = 'Update Post';
+      this.postSubmit.className = 'post-submit btn btn-warning btn-block';
+
+      const button = document.createElement('button');
+      button.className = 'post-cancel btn btn-light btn-block';
+      button.appendChild(document.createTextNode('Cancel Edit'));
+
+      // Get Parent
+      const cardForm = document.querySelector('.card-form');
+      // get element to insert before
+      const formEnd = document.querySelector('.form-end');
+      // Insert cancel Button
+      cardForm.insertBefore(button, formEnd);
+    }
+  }
+  
 }
 
 // In Modules, we have to export our file, so other files can import them by specifying

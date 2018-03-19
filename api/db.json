@@ -9,6 +9,16 @@
       "id": 2,
       "title": "Post Two",
       "body": "This is post two"
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 3
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 4
     }
   ]
 }
