@@ -12,3 +12,8 @@ export const person = {
 export function sayHello() {
   return `Hello ${person.name}`;
 }
+
+const greeting = 'Hello World';
+
+// When we use default, we don't have to use curly braces.
+export default greeting;

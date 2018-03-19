@@ -11,9 +11,14 @@
 // import { person, sayHello } from './mymodule2';
 
 // Importing everything without specifing each item
-import * as mod from './mymodule2';
+// import * as mod from './mymodule2';
 
-// For accessing use mod with dot notation
-console.log(mod.person.name); 
+// Importing specific item without using object parenthesis
+import greeting from './mymodule2';
 
-console.log(mod.sayHello());
+console.log(greeting);
+
+// // For accessing use mod with dot notation
+// console.log(mod.person.name); 
+
+// console.log(mod.sayHello());
