@@ -32,6 +32,41 @@ class UI {
    
     this.post.innerHTML = output;
   }
+
+  showAlert(message, className){
+     this.clearAlert();
+
+     // create div
+     const div = document.createElement('div');
+     // Add Classes
+     div.className = className;
+     // Add text
+     div.appendChild(document.createTextNode(message));
+     // Get Parent
+     const container = document.querySelector('.postContainer');
+     // Get Posts
+     const posts = document.querySelector('#posts');
+     // Insert alert div
+     container.insertBefore(div, posts);
+
+     // Timeout
+     setTimeout(() => {
+       this.clearAlert();
+     }, 3000);
+  }
+
+  clearAlert(){
+    const currentAlert = document.querySelector('.alert');
+
+    if(currentAlert){
+      currentAlert.remove();
+    }
+  }
+
+  clearFields(){
+    this.titleInput.value = "";
+    this.bodyInput.value = "";
+  }
 }
 
 // In Modules, we have to export our file, so other files can import them by specifying
