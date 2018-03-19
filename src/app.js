@@ -7,7 +7,9 @@
 // Importing ES5 Module
 // const person = require('./mymodule1');
 
-// Importing ES2015 Module
-import { person } from './mymodule2';
+// Importing ES2015 Module, using Destructuring we can pull out multiple things
+import { person, sayHello } from './mymodule2';
 
 console.log(person.name); 
+
+console.log(sayHello());
